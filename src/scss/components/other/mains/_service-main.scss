@@ -1,0 +1,15 @@
+// メインコンテンツ・事業内容（SERVICE）
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.serviceMain {
+  margin-block-start: 50px;
+
+
+  @include g.mq('lg-min') {
+    margin-block-start: 100px;
+  }
+}

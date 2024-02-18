@@ -1,0 +1,27 @@
+// メインコンテンツ・CONTACT（お問合わせ）
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.contactMain {
+  margin-block-start: 50px;
+
+  &__body {
+    padding-block: 50px;
+  }
+
+
+  @include g.mq() {
+
+    &__body {
+      padding-block: 80px;
+    }
+  }
+
+
+  @include g.mq('lg-min') {
+    margin-block-start: 100px;
+  }
+}

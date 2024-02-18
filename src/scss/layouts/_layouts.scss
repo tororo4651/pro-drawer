@@ -1,0 +1,14 @@
+// レイアウト・全般
+
+
+// 変数、ミックスイン、関数
+@use "../global" as g;
+
+
+// コンテナ
+.l-container {
+  width: 1120px;
+  max-width: 100%;
+  padding-inline: 20px;
+  margin-inline: auto;
+}

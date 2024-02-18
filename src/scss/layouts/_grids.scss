@@ -1,0 +1,21 @@
+// レイアウト・CSSグリッド
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+// SERVICE（事業内容）ページ
+.grid-service {
+  display: grid;
+  grid-template-columns:
+  minmax(20px, 1fr) minmax(auto, 1080px) minmax(20px, 1fr);
+
+  &__division {
+    grid-column: 2;
+  }
+
+  &__sectionWrapper {
+      grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,73 @@
+// セクション・共通のお問合わせ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.commonContactSection {
+  padding-block: 50px;
+  background-color: g.$mainColor;
+  color: g.$whiteColor;
+  text-align: center;
+
+  &__lead {
+    margin-top: 30px;
+    @include g.fz(14);
+  }
+
+  &__btn {
+    width: 400px;
+    max-width: 100%;
+    margin-top: 40px;
+    margin-inline: auto;
+  }
+
+  &__text {
+    margin-block-start: 40px;
+    @include g.fz(14);
+  }
+
+  &__address {
+    margin-block-start: 10px;
+  }
+
+  &__tel {
+    font-family: 'Oswald', sans-serif;
+    @include g.fz(24);
+    font-weight: bold;
+
+    &Num {
+      @include g.fz(40);
+    }
+  }
+
+  &__time {
+    @include g.fz(14);
+  }
+
+
+  @include g.mq {
+    padding-block: 80px;
+
+    &__lead {
+      @include g.fz(16);
+    }
+
+    &__text {
+      @include g.fz(16);
+    }
+
+    &__tel {
+      @include g.fz(30);
+
+      &Num {
+        @include g.fz(48);
+      }
+    }
+
+    &__time {
+      @include g.fz(16);
+    }
+  }
+}

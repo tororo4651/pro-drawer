@@ -1,0 +1,20 @@
+// メインコンテンツ・トップページ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.topMain {
+  margin-block: 50px;
+
+
+  @include g.mq {
+    margin-block-end: 80px;
+  }
+
+
+  @include g.mq('lg-min') {
+    margin-block-start: 100px;
+  }
+}

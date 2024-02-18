@@ -1,0 +1,94 @@
+// パーツ・見出し
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+// プライマリ
+.primaryHeading {
+  font-family: Oswald, sans-serif;
+  @include g.fz(28);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+
+  &--center {
+    text-align: center;
+  }
+
+
+  @include g.mq() {
+    @include g.fz(48);
+  }
+}
+
+
+
+
+// セカンダリ
+.secondaryHeading {
+
+  &__main {
+    display: block;
+    @include g.fz(20);
+    font-weight: bold;
+  }
+
+  &__sub {
+    display: block;
+    color: g.$mainColor;
+    @include g.fz(16);
+    font-weight: bold;
+  }
+
+
+  @include g.mq {
+
+    &__main {
+      @include g.fz(28);
+    }
+
+    &__sub {
+      @include g.fz(20);
+    }
+  }
+}
+
+
+
+
+// ターシャリ
+.tertiaryHeading {
+  @include g.fz(24);
+  font-weight: bold;
+
+  &--white {
+    color: g.$whiteColor;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    border-top: solid 1px;
+    margin-block-start: 15px;
+  }
+
+  &--center::after {
+    margin-inline: auto;
+  }
+
+  &--mainColorBar::after {
+    border-color: g.$mainColor;
+  }
+
+
+  @include g.mq('md-min') {
+    @include g.fz(28);
+  }
+}

@@ -1,0 +1,41 @@
+<header class="header">
+
+  <<%= el %> class="header__logo">
+    <a class="header__logoLink" href="/">
+      <img class="header__logoImage" src="/src/images/common/logo.svg" alt="Grass Field" width="210" height="46">
+    </a>
+  </<%= el %>>
+
+  <button class="header__gNavBtn gNavBtn" type="button" aria-label="メニューを開く" aria-controls="gNav" aria-expanded="false">
+    <span class="gNavBtn__line"></span>
+  </button>
+
+  <nav class="header__gNav gNav" id="gNav">
+    <ul class="gNav__list">
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--home" href="/">Home</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--service" href="/service/">事業内容</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--products" href="/products/">商品紹介</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--company" href="/company/">会社概要</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--recruit" href="/recruit/">採用情報</a>
+      </li>
+
+      <li class="gNav__item">
+        <a class="gNav__link gNav__link--contact" href="/contact/">お問合わせ</a>
+      </li>
+    </ul>
+  </nav>
+
+</header>

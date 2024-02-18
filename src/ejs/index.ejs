@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('./components/common/_head.ejs', {pageTitle: 'トップページ', imageUrl: '../'}) %>
+
+<body class="home">
+
+<%- include('./components/common/_header', {el: 'h1'}) %>
+
+
+<main class="topMain">
+
+  <div class="topHero">
+    <div class="topHero__inner">
+
+      <p class="topHero__catch">
+        キャッチコピーの<br>
+        文章がはいりますキャッチコピーの文章が入ります
+      </p>
+
+      <figure class="topHero__figure">
+        <img class="topHero__image" src="../images/top/mv_illust.svg" alt="" width="440" height="382">
+      </figure>
+
+    </div><!-- /.topHero__inner.l-container -->
+  </div><!-- /.topHero -->
+
+  <div class="l-container">
+
+    <section class="topSection">
+      <h2 class="topSection__heading primaryHeading primaryHeading--center">Service</h2>
+
+      <div class="topSection__cards">
+        <div class="topSection__card primaryCard">
+          <img class="primaryCard__image"
+            srcset="../images/top/dmy_thumb01@2x.jpg 2x"
+            src="../images/top/dmy_thumb01.jpg"
+            alt=""
+            width="348"
+            height="160">
+
+          <dl class="primaryCard__list">
+            <dt class="primaryCard__listTerm">サービス名</dt>
+            <dd class="primaryCard__listDesc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+          </dl>
+
+          <a class="primaryCard__btn secondaryBtn" href="#">詳しく見る</a>
+        </div><!-- /.topSection__card primaryCard -->
+
+        <div class="topSection__card primaryCard">
+          <img class="primaryCard__image"
+            srcset="../images/top/dmy_thumb01@2x.jpg 2x"
+            src="../images/top/dmy_thumb01.jpg"
+            alt=""
+            width="348"
+            height="160">
+
+          <dl class="primaryCard__list">
+            <dt class="primaryCard__listTerm">サービス名</dt>
+            <dd class="primaryCard__listDesc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+          </dl>
+
+          <a class="primaryCard__btn secondaryBtn" href="#">詳しく見る</a>
+        </div><!-- /.topSection__card primaryCard -->
+
+        <div class="topSection__card primaryCard">
+          <img class="primaryCard__image"
+            srcset="../images/top/dmy_thumb01@2x.jpg 2x"
+            src="../images/top/dmy_thumb01.jpg"
+            alt=""
+            width="348"
+            height="160">
+
+          <dl class="primaryCard__list">
+            <dt class="primaryCard__listTerm">サービス名</dt>
+            <dd class="primaryCard__listDesc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+          </dl>
+
+          <a class="primaryCard__btn secondaryBtn" href="#">詳しく見る</a>
+        </div><!-- /.topSection__card primaryCard -->
+      </div><!-- /.topSection__cards -->
+
+      <a class="topSection__btn primaryBtn" href="/service/">事業内容</a>
+    </section>
+
+    <section class="topSection">
+      <h2 class="topSection__heading primaryHeading primaryHeading--center">Pick Up</h2>
+
+      <ul class="topSection__list primaryList">
+        <li class="primaryList__item">
+          <a class="primaryList__link" href="#">
+            <img class="primaryList__image"
+              srcset="/src/images/top/dmy_thumb02@2x.jpg 2x"
+              src="/src/images/top/dmy_thumb02.jpg"
+              alt=""
+              width="256"
+              height="164">
+
+            <div class="primaryList__title">
+              商品タイトル
+            </div><!-- /.primaryList__title -->
+          </a>
+        </li>
+
+        <li class="primaryList__item">
+          <a class="primaryList__link" href="#">
+            <img class="primaryList__image"
+              srcset="/src/images/top/dmy_thumb02@2x.jpg 2x"
+              src="/src/images/top/dmy_thumb02.jpg"
+              alt=""
+              width="256"
+              height="164">
+
+            <div class="primaryList__title">
+              商品タイトル
+            </div><!-- /.primaryList__title -->
+          </a>
+        </li>
+
+        <li class="primaryList__item">
+          <a class="primaryList__link" href="#">
+            <img class="primaryList__image"
+              srcset="/src/images/top/dmy_thumb02@2x.jpg 2x"
+              src="/src/images/top/dmy_thumb02.jpg"
+              alt=""
+              width="256"
+              height="164">
+
+            <div class="primaryList__title">
+              長い商品タイトルタイトル最大30文字までありえます
+            </div><!-- /.primaryList__title -->
+          </a>
+        </li>
+
+        <li class="primaryList__item">
+          <a class="primaryList__link" href="#">
+            <img class="primaryList__image"
+              srcset="/src/images/top/dmy_thumb02@2x.jpg 2x"
+              src="/src/images/top/dmy_thumb02.jpg"
+              alt=""
+              width="256"
+              height="164">
+
+            <div class="primaryList__title">
+              商品タイトル
+            </div><!-- /.primaryList__title -->
+          </a>
+        </li>
+      </ul>
+
+      <a class="topSection__btn primaryBtn" href="/products/">商品紹介</a>
+    </section>
+
+  </div><!-- /.l-container -->
+
+</main>
+
+
+<%- include('./components/common/_footer') %>
+
+
+
+
+
+
+
+
+</body>
+</html>

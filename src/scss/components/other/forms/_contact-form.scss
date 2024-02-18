@@ -1,0 +1,347 @@
+// 表・CONTACT（お問合わせ）
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.contactForm {
+
+  &__table {
+    width: 100%;
+
+    &Row {
+      border-top: dashed 1px #ccc;
+      border-bottom: dashed 1px #ccc;
+      height: 100px;
+    }
+
+    &Header,
+    &Data {
+      padding-block: 20px;
+      vertical-align: middle;
+    }
+
+    &Header {
+      width: 32.4%;
+      padding-inline-end: 40px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include g.fz(18);
+    font-weight: 500;
+  }
+
+  &__subLabel {
+    display: block;
+    margin-block-end: 5px;
+    font-weight: bold;
+  }
+
+  &__tag {
+    padding-inline: 10px;
+    margin-inline-start: 10px;
+    background-color: g.$mainColor;
+    color: g.$whiteColor;
+    @include g.fz(12);
+    font-weight: normal;
+  }
+
+  &__select,
+  &__textarea,
+  &__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 10px 20px;
+    border: solid 1px g.$grayColor;
+    border-radius: 4px;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px g.$lightMainColor;
+    }
+
+    .is-error & {
+      color: g.$errorColor;
+      border-color: g.$errorColor;
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+  }
+
+  &__selectWrapper {
+    position: relative;
+
+    .is-error & {
+      color: g.$errorColor;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 20px;
+      width: 10px;
+      height: 10px;
+      margin-block: auto;
+      border-right: solid 2px;
+      border-bottom: solid 2px;
+      rotate: 45deg;
+      pointer-events: none;
+    }
+  }
+
+  &__radioLabel {
+
+    &:first-child {
+      margin-inline-end: 2rem;
+    }
+
+    &Text {
+      position: relative;
+      display: inline-block;
+      padding: .3em .3em .3em 2em;
+      line-height: 1;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: .15em;
+        left: 0;
+        width: 1.375em;
+        height: 1.375em;
+        border: solid .15em g.$whiteColor;
+        outline: solid 1px #ccc;
+        border-radius: 50%;
+        background-color: g.$whiteColor;
+
+        .contactForm__radio:checked + & {
+          background-color: g.$mainColor;
+        }
+      }
+
+      // &::after {
+      //   display: none;
+      //   content: "";
+      //   position: absolute;
+      //   top: .45em;
+      //   left: .2em;
+      //   width: 1em;
+      //   height: 1em;
+      //   background-color: g.$mainColor;
+      //   border-radius: 50%;
+
+      //   .contactForm__radio:checked + & {
+      //     display: block;
+      //   }
+      // }
+
+      .contactForm__radio:focus + & {
+        box-shadow: 0 0 5px g.$lightMainColor;
+      }
+    }
+  }
+
+  &__radio,
+  &__checkbox {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__nameGroup {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nameField {
+    width: 48.68%;
+  }
+
+  &__note {
+    margin-block-start: 10px;
+    color: g.$grayColor;
+    @include g.fz(12);
+  }
+
+  &__errorText {
+    display: none;
+    margin-block-start: 16px;
+    color: g.$errorColor;
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.25em;
+      height: 1.25em;
+      margin-inline-end: .2em;
+      background-image: url(../images/common/icon_attention.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      vertical-align: middle;
+    }
+
+    .is-error & {
+      display: block;
+    }
+  }
+
+  &__privacy {
+    margin-block-start: 80px;
+    border: solid 1px #ccc;
+    padding: 40px;
+    text-align: center;
+
+    &Text {
+      margin-block-end: 50px;
+      line-height: 1.8;
+    }
+
+    &Link {
+      color: #268A32;
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+
+    &Label {
+
+      &Text {
+        position: relative;
+        display: inline-block;
+        padding: .3em .3em .3em 2em;
+        line-height: 1;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 4px;
+          left: 0;
+          width: 1.25em;
+          height: 1.25em;
+          border: solid 1px #ccc;
+          background-color: g.$whiteColor;
+        }
+
+        &::after {
+          display: none;
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 2px;
+          width: 1em;
+          height: .5em;
+          border-left: solid 3px g.$mainColor;
+          border-bottom: solid 3px g.$mainColor;
+          rotate: -45deg;
+
+          .contactForm__checkbox:checked + & {
+            display: block;
+          }
+        }
+
+        .contactForm__checkbox:focus + & {
+          box-shadow: 0 0 5px g.$lightMainColor;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    padding: 20px;
+    padding-left: calc(20px + .2em);
+    border: none;
+    margin: 80px auto 0;
+    background-color: g.$orangeColor;
+    color: g.$whiteColor;
+    @include g.fz(20);
+    font-weight: bold;
+    letter-spacing: .2em;
+    cursor: pointer;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+
+  @include g.mq('md-max') {
+
+    &__table {
+      display: block;
+
+      tbody,
+      &Row,
+      &Header,
+      &Data {
+        display: block;
+      }
+
+      &Row {
+        height: auto;
+      }
+
+      &Header,
+      &Data {
+        padding: 0;
+      }
+
+      &Header {
+        width: 100%;
+        margin-block: 20px 10px;
+      }
+
+      &Data {
+        margin-block-end: 20px;
+      }
+    }
+
+    &__label {
+      display: inline-block;
+    }
+
+    &__nameGroup {
+      display: block;
+    }
+
+    &__nameField {
+      width: 100%;
+
+      & + & {
+        margin-block-start: 10px;
+      }
+    }
+
+    &__privacy {
+      margin-block-start: 50px;
+      padding: 20px;
+
+      &Text {
+        margin-block-end: 20px;
+        text-align: start;
+      }
+    }
+
+    &__submit {
+      margin: 50px auto 0;
+    }
+  }
+}

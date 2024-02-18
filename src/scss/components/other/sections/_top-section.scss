@@ -1,0 +1,51 @@
+// セクション・トップページ
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+.topSection {
+  padding-block: 50px 20px;
+
+  &__cards {
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  &__card {
+    margin-block-start: 20px;
+  }
+
+  &__btn {
+    margin-block-start: 20px;
+    max-width: 400px;
+    margin-inline: auto;
+  }
+
+  &__list {
+    margin-block-start: 20px;
+  }
+
+
+  @include g.mq() {
+    padding-block: 80px 40px;
+
+    &__cards {
+      max-width: none;
+      margin-block-start: 40px;
+      display: flex;
+      margin-inline: -10px;
+    }
+
+    &__card {
+      width: calc((100% - 20px * 2) / 3);
+      margin-inline: 10px;
+      margin-block-start: 0;
+    }
+
+    &__btn {
+      margin-block-start: 40px;
+    }
+  }
+}

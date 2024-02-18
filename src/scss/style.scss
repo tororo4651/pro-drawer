@@ -1,0 +1,93 @@
+// CSSカスタムプロパティ・CSS変数・カスケード変数
+@use "./settings/_variables.scss";
+
+
+
+
+// ベース
+@use "bases/bases";
+
+
+
+
+// レイアウト
+
+// 全般
+@use "./layouts/layouts";
+
+// CSSグリッド
+@use "./layouts/grids";
+
+
+
+
+// コンポーネント・パーツ
+
+// 見出し
+@use "./components/parts/_headings.scss";
+
+// ボタン
+@use "./components/parts/_btns.scss";
+
+
+
+
+// コンポーネント・共通
+
+// ヘッダー
+@use "components/common/_header.scss";
+
+// グローバルナビゲーション
+@use "components/common/gnav";
+
+// パンくずリスト
+@use "components/common/breadcrumb";
+
+// フッター
+@use "./components/common/_footer";
+
+
+
+
+// コンポーネント・その他
+
+// ヒーローイメージ・プライマリ
+@use "components/other/heroes/primary-hero";
+// ヒーローイメージ・セカンダリ
+@use "components/other/heroes/secondary-hero";
+// ヒーローイメージ、キービジュアル、メインビジュアル、ヘッダー画像、ラージヘッダー・トップページ
+@use "components/other/heroes/_top-hero.scss";
+
+
+// メインコンテンツ・トップページ
+@use "./components/other/mains/top-main";
+// メインコンテンツ・SERVICE（事業内容）
+@use "./components/other/mains/service-main";
+// メインコンテンツ・CONTACT（お問合わせ）
+@use "./components/other/mains/contact-main";
+
+
+// セクション・共通のお問合わせ
+@use "./components/other/sections/common-contact-section";
+// セクション・トップページ
+@use "./components/other/sections/top-section";
+// セクション・SERVICE（事業案内）
+@use "./components/other/sections/service-section";
+// セクション・CONTACT（お問合わせ）
+@use "./components/other/sections/contact-section";
+
+
+// ディビジョン・事業内容（SERVICE）ページ
+@use "./components/other/divisions/_service-division";
+
+
+// カード・プライマリ
+@use "components/other/cards/primary-card";
+
+
+// リスト・プライマリ
+@use "./components/other/lists/primary-list";
+
+
+// フォーム・CONTACT（お問合わせ）
+@use "./components/other/forms/_contact-form.scss";

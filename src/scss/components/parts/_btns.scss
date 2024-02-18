@@ -1,0 +1,62 @@
+// パーツ・ボタン
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global" as g;
+
+
+// プライマリ
+.primaryBtn {
+  display: block;
+  border: solid 2px g.$mainColor;
+  padding: 20px;
+  background-color: g.$whiteColor;
+  @include g.fz(20);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: .2em;
+  transition: .3s;
+
+  @include g.hover-focus {
+    background-color: g.$mainColor;
+    color: g.$whiteColor;
+  }
+}
+
+
+
+// セカンダリ
+.secondaryBtn {
+  display: block;
+  border: solid 2px g.$mainColor;
+  padding: 12px 15px;
+  background-color: g.$mainColor;
+  color: g.$whiteColor;
+  text-align: center;
+  transition: .3s;
+
+  @include g.hover-focus {
+    background-color: g.$whiteColor;
+    color: g.$mainColor;
+  }
+}
+
+
+
+// ターシャリ
+.tertiaryBtn {
+  display: block;
+  border: solid 2px g.$whiteColor;
+  padding: 20px;
+  background-color: transparent;
+  color: g.$whiteColor;
+  @include g.fz(20);
+  font-weight: bold;
+  text-decoration-line: none;
+  text-align: center;
+  transition: .3s;
+
+  @include g.hover-focus {
+    background-color: rgba(g.$whiteColor, .3);
+  }
+}

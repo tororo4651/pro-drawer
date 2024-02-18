@@ -1,0 +1,15 @@
+// 関数
+
+
+// 変数
+@use "./variables/" as v;
+
+
+
+// 合計
+@function sum($num1: 12, $num2: 63) {
+  @return ($num1 + $num2) * 1px;
+  // @return calc(($num1 + $num2) * 1px);
+  // @return $num1 + $num2 + px;
+    // 'px' は、不可。
+}

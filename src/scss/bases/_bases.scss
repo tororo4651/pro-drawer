@@ -1,0 +1,23 @@
+// ベース
+
+
+// 変数、ミックスイン、関数
+@use "../global" as g;
+
+
+
+// リセットCSS
+@use "_reset.scss";
+
+
+
+body {
+  color: g.$textColor;
+  font-family: g.$sans;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration-line: none;
+  color: inherit;
+}

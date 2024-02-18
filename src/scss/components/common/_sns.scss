@@ -1,0 +1,48 @@
+// SNS
+
+
+// 変数、ミックスイン、関数
+@use "@scss/global/" as g;
+
+
+.sns {
+  display: flex;
+
+  &__item {
+
+    &:not(:last-of-type) {
+      margin-inline-end: 20px;
+    }
+  }
+
+  &__icon {
+    transition: color .15s ease-in-out;
+
+    &--01 {
+      color: g.$lightPinkColor;
+      font-size: 2rem;
+
+      @include g.hover-focus {
+        color: g.$pinkColor;
+      }
+    }
+
+    &--02 {
+      color: g.$lightBrownColor;
+      font-size: 2rem;
+
+      @include g.hover-focus {
+        color: g.$brownColor;
+      }
+    }
+
+    &--03 {
+      color: g.$lightGrayColor;
+      font-size: 1.5rem;
+
+      @include g.hover-focus {
+        color: g.$grayColor;
+      }
+    }
+  }
+}
